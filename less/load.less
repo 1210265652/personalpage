@@ -1,0 +1,26 @@
+/*.loop(@type:s,@n:1) when (@n<=@col) {
+  .container>.col-@{type}-@{n} {
+    float: left;
+    width:@n/@col*100%;
+  }
+  .container>.row>.col-@{type}-@{n} {
+    float: left;
+    width:@n/@col*100%;
+  }
+  .loop(@type,@n+1);
+}*/
+.loop(@n:0%) when(@n<=99%){
+    @{n}{
+      width: @n;
+    }
+  .loop(@n+1%);
+}
+@keyframes load {
+    .loop();
+  100%{
+    width:100%;
+    /*opacity: 0;
+    display: none;
+    z-index: -3;*/
+  }
+}

@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZYDragon homepage</title>
+    <link rel="stylesheet" href="css/load.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+</head>
+<script>
+    window.onload=function(){
+        var cw=document.body.clientWidth;//浏览器宽度
+        var start=document.querySelector(".start");
+        var welcome=document.querySelector(".welcome");
+        var loading=document.querySelector(".loading");
+        var progress=document.querySelector(".progress");
+
+        var flag=0;
+        start.onclick=function(){
+            welcome.style.cssText="animation:start1 0.3s ease forwards";
+            flag=1;
+            if(flag==1){
+                progress.style.cssText="animation: load 2s ease forwards";
+            }
+            var t=setInterval(function(){
+                var proW=parseInt(window.getComputedStyle(progress,null)['width']);
+                if(proW==cw){
+                    loading.style.cssText="animation: loads 2s ease forwards";
+                    clearInterval(t);
+                }
+            },30)
+        }
+    }
+</script>
+<body>
+<!--欢迎界面-->
+<!--<div class="welcome">
+    <div class="outcon">
+        <div class="start">
+        </div>
+    </div>
+    <div class="weltitle">
+        <img src="img/title.png" alt="">
+    </div>
+    <span class="simple">前端那些事儿&nbsp;|&nbsp;赵云龙个人网站&nbsp;|&nbsp;前端开发与用户体验</span>
+    <div class="back1"></div>
+    <div class="back2"></div>
+    <div class="welnav">
+        <div class="welist">
+            <img src="img/note.png" alt="">
+            <span>工作笔记</span>
+        </div>
+        <div class="welpoint">
+            <img src="img/point.png" alt="">
+        </div>
+        <div class="welist">
+            <img src="img/web.png" alt="">
+            <span>前端开发</span>
+        </div>
+        <div class="welpoint">
+            <img src="img/point.png" alt="">
+        </div>
+        <div class="welist">
+            <img src="img/server.png" alt="">
+            <span>用户体验</span>
+        </div>
+        <div class="welpoint">
+            <img src="img/point.png" alt="">
+        </div>
+        <div class="welist">
+            <img src="img/project.png" alt="">
+            <span>我的作品</span>
+        </div>
+        <div class="welpoint">
+            <img src="img/point.png" alt="">
+        </div>
+        <div class="welist">
+            <img src="img/about.png" alt="">
+            <span>关于我</span>
+        </div>
+    </div>
+</div>-->
+<!--加载效果-->
+<!--<div class="loading">
+    <h1 class="loadtext">页面加载中</h1>
+    <div class="progress"></div>
+</div>-->
+<!--呈现内容-->
+<div class="back">
+    <div class="firstline container">
+        <div class="header col-l-3">
+            <h1><span><！--</span>ZYDragon个人主页<span>--！></span></h1>
+            <div class="beizhu">
+                <span>赵云龙</span> | <span>前端工程师</span> | <span>step by step</span>
+            </div>
+        </div>
+        <div class="empty col-s-hide col-m-hide col-l-2"></div>
+        <div class="nav col-l-7">
+            <div class="list menu">
+                <a href="javascript:;">
+                    <img src="img/note.png" alt="">
+                    <span>工作笔记</span>
+                </a>
+            </div>
+            <div class="point">
+                <img src="img/point.png" alt="">
+            </div>
+            <div class="list menu">
+                <a href="javascript:;">
+                    <img src="img/web.png" alt="">
+                    <span>前端技术</span>
+                </a>
+            </div>
+            <div class="point">
+                <img src="img/point.png" alt="">
+            </div>
+            <div class="list menu">
+                <a href="javascript:;">
+                    <img src="img/server.png" alt="">
+                    <span>后台开发</span>
+                </a>
+            </div>
+            <div class="point">
+                <img src="img/point.png" alt="">
+            </div>
+            <div class="list menu">
+                <a href="javascript:;">
+                    <img src="img/project.png" alt="">
+                    <span>我的作品</span>
+                </a>
+            </div>
+            <div class="point">
+                <img src="img/point.png" alt="">
+            </div>
+            <div class="list">
+                <a href="javascript:;">
+                    <img src="img/about.png" alt="">
+                    <span>关于我</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="showcon">
+            <div class="title">
+                <h1>最新文章</h1>
+            </div>
+            <div class="contentbox">
+                <div class="content">
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t1.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>关于响应式</p>
+                            <p>响应式布局面对不同的分辨率设备灵活性强，能够快捷解决多设备显示适应问题。核心原理：@media 可以检测到不同终端设备的分辨率，然后执行相应的css样式。</p>
+                        </div>
+                        <div class="confloat" >
+                            <div class="ftext">
+                                <h1>关于响应式</h1>
+                                <p>响应式布局可以为不同终端的用户提供更加舒适的界面和更好的用户体验，而且随着目前大屏幕移动设备的普及，用“大势所趋”来形容也不为过。随着越来越多的设计师采用这个技术，我们不仅看到很多的创新，还看到了一些成形的模式。</p>
+                            </div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t2.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>面向对象三大特性</p>
+                            <p>继承，封装，多态。以人类的思维方式，编写程序。把我们所研究的事物当做对象去看，有属性有功能，一个对象功能属性越多，这个对象的能力越强。</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">kjkdfjkdjf</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t3.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>MVC框架</p>
+                            <p>M:model模型(数据)V:view视图C:control控制器</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">aaaaa</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t4.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">cccc</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t5.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">dddd</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t6.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">wwww</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t1.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计--abb</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t2.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t3.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t4.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t5.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t6.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t1.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网网设计&#45;&#45;abb</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t2.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t3.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t4.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t5.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t6.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="squerybox">
+                <div class="squery"></div>
+                <div class="squery"></div>
+                <div class="squery"></div>
+            </div>
+            <div class="num">1</div>
+        </div>
+        <div class="showcon menucon">
+            <div class="title">
+                <h1>工作笔记</h1>
+            </div>
+            <div class="contentbox">
+                <div class="content">
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t1.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>关于响应式111</p>
+                            <p>响应式布局面对不同的分辨率设备灵活性强，能够快捷解决多设备显示适应问题。核心原理：@media 可以检测到不同终端设备的分辨率，然后执行相应的css样式。</p>
+                        </div>
+                        <div class="confloat" >
+                            <div class="ftext">nimenhao</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t2.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>面向对象三大特性</p>
+                            <p>继承，封装，多态。以人类的思维方式，编写程序。把我们所研究的事物当做对象去看，有属性有功能，一个对象功能属性越多，这个对象的能力越强。</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">kjkdfjkdjf</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t3.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>MVC框架</p>
+                            <p>M:model模型(数据)V:view视图C:control控制器</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">aaaaa</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t4.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">cccc</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t5.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">dddd</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t6.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">wwww</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t1.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计--abb</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t2.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t3.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t4.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t5.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t6.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t1.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网网设计--abb</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t2.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t3.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t4.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t5.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t6.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="squerybox">
+                <div class="squery"></div>
+                <div class="squery"></div>
+                <div class="squery"></div>
+            </div>
+            <div class="num">1</div>
+        </div>
+        <div class="menucon"></div>
+        <div class="showcon menucon">
+            <div class="title">
+                <h1>前端开发</h1>
+            </div>
+            <div class="contentbox">
+                <div class="content">
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t1.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>关于响应式</p>
+                            <p>响应式布局面对不同的分辨率设备灵活性强，能够快捷解决多设备显示适应问题。核心原理：@media 可以检测到不同终端设备的分辨率，然后执行相应的css样式。</p>
+                        </div>
+                        <div class="confloat" >
+                            <div class="ftext">nimenhao</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t2.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>面向对象三大特性</p>
+                            <p>继承，封装，多态。以人类的思维方式，编写程序。把我们所研究的事物当做对象去看，有属性有功能，一个对象功能属性越多，这个对象的能力越强。</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">kjkdfjkdjf</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t3.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>MVC框架</p>
+                            <p>M:model模型(数据)V:view视图C:control控制器</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">aaaaa</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t4.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">cccc</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t5.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">dddd</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t6.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">wwww</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t1.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计--abb</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t2.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t3.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t4.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t5.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t6.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t1.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网网设计--abb</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t2.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t3.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t4.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t5.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t6.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="squerybox">
+                <div class="squery"></div>
+                <div class="squery"></div>
+                <div class="squery"></div>
+            </div>
+            <div class="num">1</div>
+        </div>
+        <div class="menucon"></div>
+        <div class="showcon menucon">
+            <div class="title">
+                <h1>用户体验</h1>
+            </div>
+            <div class="contentbox">
+                <div class="content">
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t1.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>关于响应式</p>
+                            <p>响应式布局面对不同的分辨率设备灵活性强，能够快捷解决多设备显示适应问题。核心原理：@media 可以检测到不同终端设备的分辨率，然后执行相应的css样式。</p>
+                        </div>
+                        <div class="confloat" >
+                            <div class="ftext">nimenhao</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t2.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>面向对象三大特性</p>
+                            <p>继承，封装，多态。以人类的思维方式，编写程序。把我们所研究的事物当做对象去看，有属性有功能，一个对象功能属性越多，这个对象的能力越强。</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">kjkdfjkdjf</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t3.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>MVC框架</p>
+                            <p>M:model模型(数据)V:view视图C:control控制器</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">aaaaa</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t4.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">cccc</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t5.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">dddd</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t6.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                        <div class="confloat">
+                            <div class="ftext">wwww</div>
+                            <div class="closeImg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t1.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计--abb</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t2.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t3.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t4.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t5.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t6.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t1.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网网设计--abb</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t2.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t3.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t4.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t5.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                    <div class="conList">
+                        <div class="conImg">
+                            <img src="img/t6.jpg" alt="">
+                        </div>
+                        <div class="conTxt">
+                            <p>响应式网页设计</p>
+                            <p>响应式Web设计(Responsive Web design)的理念是： 页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="squerybox">
+                <div class="squery"></div>
+                <div class="squery"></div>
+                <div class="squery"></div>
+            </div>
+            <div class="num">1</div>
+        </div>
+        <div class="menucon"></div>
+        <div class="showcon menucon">
+            <div class="title">
+                <h1>我的作品</h1>
+            </div>
+            <div class="contentbox"style="height:300px">
+                <ul class="probox">
+                    <li class="pro">
+                        <div class="protit">2014-09-20</div>
+                        <div class="proimg">
+                            <a href="http://localhost/blog/index.php" target="_blank">
+                                <img src="img/project/blog.png" alt="" style="width: 100%;height:100%">
+                            </a>
+                        </div>
+                        <div class="protxt">基于php语言mvc模式下个人博客网站</div>
+                    </li>
+                    <li class="pro">
+                        <div class="protit">2014-09-20</div>
+                        <div class="proimg">
+                            <a href="http://localhost/amily/amilyphpcms/index.php" target="_blank">
+                                <img src="img/project/amily.png" alt="" style="width: 100%;height:100%">
+                            </a>
+                        </div>
+                        <div class="protxt">基于phpcms开发框架下的Amily美荔网站</div>
+                    </li>
+                    <li class="pro">
+                        <div class="protit">2014-07-20</div>
+                        <div class="proimg">
+                            <a href="https://1210265652.github.io/css3-house/" target="_blank">
+                                <img src="img/project/house.png" alt="" style="width: 100%;height:100%">
+                            </a>
+                        </div>
+                        <div class="protxt">CSS3-house</div>
+                    </li>
+                    <li class="pro">
+                        <div class="protit">2014-09-20</div>
+                        <div class="proimg">
+                            <a href="https://1210265652.github.io/canvas-game-paoku/" target="_blank">
+                                <img src="img/project/game.png" alt="" style="width: 100%;height:100%">
+                            </a>
+                        </div>
+                        <div class="protxt">canvas-game</div>
+                    </li>
+                    <li class="pro">
+                        <div class="protit">2014-07-20</div>
+                        <div class="proimg">
+                            <a href="https://1210265652.github.io/drawimg/canvas3.0.html" target="_blank">
+                                <img src="img/project/draw.png" alt="" style="width: 100%;height:100%">
+                            </a>
+                        </div>
+                        <div class="protxt">Canvas 简约实用--画板</div>
+                    </li>
+                    <li class="pro">
+                        <div class="protit">2014-09-20</div>
+                        <div class="proimg">
+                            <a href="https://1210265652.github.io/fullpage/fullPage.html" target="_blank">
+                                <img src="img/project/fullpage.png" alt="" style="width: 100%;height:100%">
+                            </a>
+                        </div>
+                        <div class="protxt">Fullpage</div>
+                    </li>
+                    <li class="pro">
+                        <div class="protit">2014-07-20</div>
+                        <div class="proimg">
+                            <a href="https://1210265652.github.io/baidu--yuqing/" target="_blank">
+                                <img src="img/project/yuqing.png" alt="" style="width: 100%;height:100%">
+                            </a>
+                        </div>
+                        <div class="protxt">仿百度舆情</div>
+                    </li>
+                    <li class="pro">
+                        <div class="protit">2014-09-20</div>
+                        <div class="proimg">
+                            <a href="http://nodenews.duapp.com/list/2" target="_blank" style="display: flex;justify-content: space-between;background: white">
+                                <img src="img/project/app.png" alt="" style="height: 100%;float: left">
+                                <img src="img/project/app1.png" alt="" style="height: 100%;float: left">
+                                <img src="img/project/newsapp.png" alt="" style="height: 100%;float: left">
+                            </a>
+                        </div>
+                        <div class="protxt">NodeJS 爬虫技术 新闻app</div>
+                    </li>
+                    <li class="pro">
+                        <div class="protit">2014-09-20</div>
+                        <div class="proimg">
+                            <a href="http://hmsgatten.duapp.com/" target="_blank" style="display: flex;justify-content: space-between;background: white">
+                                <img src="img/project/tongxun--app1.png" alt="" style="height: 100%;float: left">
+                                <img src="img/project/tongxun--app2.png" alt="" style="height: 100%;float: left">
+                                <img src="img/project/tongxun--app3.png" alt="" style="height: 100%;float: left">
+                            </a>
+                        </div>
+                        <div class="protxt">AngularJS+NodeJS 公司内部通讯录app</div>
+                    </li>
+                    <li class="pro">
+                        <div class="protit">2014-07-20</div>
+                        <div class="proimg">
+                            <a href="http://localhost:8000/" target="_blank">
+                                <img src="img/project/zujian.png" alt="" style="width: 100%;height:100%">
+                            </a>
+                        </div>
+                        <div class="protxt">react 个人组件下载</div>
+                    </li>
+                </ul>
+                <div class="mouse">
+                    <img src="img/yd_img.png" alt="">
+                    试试鼠标滚轮
+                </div>
+                <div class="proarr">
+                    <div class="proarrL"></div>
+                    <div class="proarrR"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mood">人生最难得的是，认清当下的自己。</div>
+    <div id="zhe" style="background:rgba(0,0,0,.7);width:100%;height:100%;position: absolute;z-index: 2222;left:0;top:0;"></div>
+</div>
+<div class="green">
+    <div class="imgbox">
+        <img src="img/qd.png" alt="">
+    </div>
+    <div class="leftbox">
+        <img src="img/leftarr.png" alt="">
+    </div>
+    <div class="introduce">
+        <p>我是赵云龙,前端工程师一枚</p>
+        <p>熟练使用html/css来制作符合w3c规范的页面；</p>
+        <p>熟练JS的解析过程、作用域链、闭包及其原理，理解面向对象的思想, 熟练使用jquery；</p>
+        <p>熟悉html5，css3的新特性</p>
+        <p>熟练移动端技术，掌握运用zepto、bootstrap等前端框架实现响应式移动端页面的编写；</p>
+        <p>对php,node.js等后台语言以及mvc、mvvm思想有一定了解，熟悉angular的使用。</p><br><br>
+        <p style="color:#1F1F1F;font-weight: bold;line-height: 100%;font-size: 18px;">email:zydragon16@163.com</p>
+        <p style="color:#1F1F1F;font-weight: bold;line-height: 100%;font-size: 18px;">&nbsp;&nbsp;&nbsp;zydragon16@gmail.com</p>
+        <p style="color:#1F1F1F;font-weight: bold;line-height: 150%;font-size: 18px;">tel:15735805123</p>
+    </div>
+</div>
+</body>
+</html>
